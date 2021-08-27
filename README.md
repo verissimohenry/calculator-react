@@ -1,5 +1,7 @@
 # Calculator-App
 
+[Live Link](https://cocky-meninsky-3e636f.netlify.app/)
+
 A  ![](https://img.shields.io/badge/Microverse-blueviolet)  React Module Project
 
 A Calculator App is developed.
