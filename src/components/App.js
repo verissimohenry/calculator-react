@@ -1,14 +1,14 @@
 import React from 'react';
-import Display from '../Display';
+import Display from '../components/Display.js';
 import ButtonPanel from './ButtonPanel';
 import '../styles/App.css';
 
 function App() {
   return (
-      <div className="App">
+    <div className="App">
         <Display />
         <ButtonPanel />
-      </div>  
+    </div>  
   );
 }
 
