@@ -1,38 +1,46 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPannel() {
+function ButtonPanel(props) {
+  const handleClick = (buttonName) => props.clickHandler(buttonName);
   return (
     <div className="button-panel">
       <div className="buttons">
-        <Button className="AC" />
-        <Button className="+/-" />
-        <Button className="%" />
-        <Button className="/" />
-      </div>
-      <div className="Buttons">
-        <Button className="7" />
-        <Button className="8" />
-        <Button className="9" />
-        <Button className="x" />
+        <Button name="AC" clickHandler={handleClick} />
+        <Button name="+/-" clickHandler={handleClick} />
+        <Button name="%" clickHandler={handleClick} />
+        <Button name="/" clickHandler={handleClick} />
       </div>
       <div className="buttons">
-        <Button className="4" />
-        <Button className="5" />
-        <Button className="6" />
-        <Button className="-" />
+        <Button name="7" clickHandler={handleClick} />
+        <Button name="8" clickHandler={handleClick} />
+        <Button name="9" clickHandler={handleClick} />
+        <Button name="*" clickHandler={handleClick} />
+      </div>
+      <div className="buttons">
+        <Button name="4" clickHandler={handleClick} />
+        <Button name="5" clickHandler={handleClick} />
+        <Button name="6" clickHandler={handleClick} />
+        <Button name="-" clickHandler={handleClick} />
       </div>
       <div className="butons">
-        <Button className="1" />
-        <Button className="2" />
-        <Button className="3" />
-        <Button className="+" />
+        <Button name="1" clickHandler={handleClick} />
+        <Button name="2" clickHandler={handleClick} />
+        <Button name="3" clickHandler={handleClick} />
+        <Button name="+" clickHandler={handleClick} />
       </div>
       <div className="buttons">
-        <Button className="0" />
-        <Button className="." />
-        <Button className="=" />
+        <Button name="0" clickHandler={handleClick} />
+        <Button name="." clickHandler={handleClick} />
+        <Button name="=" clickHandler={handleClick} />
       </div>
     </div>
   );
 }
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.isRequired,
+};
+
+export default ButtonPanel;
