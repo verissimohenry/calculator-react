@@ -1,5 +1,4 @@
 # Calculator-App
-[Live Link]()
 
 A  ![](https://img.shields.io/badge/Microverse-blueviolet)  React Module Project
 

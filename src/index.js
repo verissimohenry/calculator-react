@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
-// import PropTypes from 'prop-types';
-// import Big from 'big.js';
 
 ReactDOM.render(
   <React.StrictMode>
