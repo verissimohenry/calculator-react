@@ -1,19 +1,35 @@
 import Big from 'big.js';
 
-const operate = (previous, next, operation) => {
+export default function operate(previous, next, operation) {
   const prev = Big(previous);
   const nxt = Big(next);
+  let value;
 
-  if (operation === '/') {
-    return nxt !== '0' ? prev.div(nxt) : 'ERROR can\'t divide by 0';
-  } if (operation === 'X') {
-    return prev.times(nxt);
-  } if (operation === '+') {
-    return prev.plus(nxt);
-  } if (operation === '-') {
-    return prev.minus(nxt);
+  switch (operation) {
+    case '+':
+      value = prev.plus(nxt);
+      break;
+    case '-':
+      value = prev.minus(nxt);
+      break;
+    case '*':
+      value = prev.times(nxt);
+      break;
+    case '%':
+      value = prev.mod(nxt);
+      break;
+    case '/':
+      if (String(nxt) !== '0') {
+        value = prev.div(nxt);
+      } else {
+        value = 'ERROR can\'t divide by 0';
+      }
+      break;
+    case '=':
+      value = prev;
+      break;
+    default:
+      value = 0;
   }
-  return 'not valid operation';
-};
-
-export default operate;
+  return value.toString();
+}
