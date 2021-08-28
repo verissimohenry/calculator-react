@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-unreachable */
+/* eslint-disable no-undef */
 import Big from 'big.js';
 
 export default function operate(previous, next, operation) {
@@ -28,8 +31,12 @@ export default function operate(previous, next, operation) {
     case '=':
       value = prev;
       break;
+    case '÷':
+      if (currentNum === 0) this.error = "Can't divide by zero";
+      else calculation = previousNum / currentNum;
+      break;
     default:
-      value = 0;
+      return;
   }
   return value.toString();
 }
