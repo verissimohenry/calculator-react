@@ -9,7 +9,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       total: '0',
-      next: '0',
+      next: '',
       operation: '',
     };
     this.handleClick = this.handleClick.bind(this);
@@ -26,14 +26,12 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { total } = this.state;
+    const { total, next, operation } = this.state;
     return (
-      <>
-        <div className="App">
-          <Display result={total} />
-          <ButtonPanel clickHandler={this.handleClick} />
-        </div>
-      </>
+      <div className="App">
+        <Display result={total} next={next} operation={operation} />
+        <ButtonPanel clickHandler={this.handleClick} />
+      </div>
     );
   }
 }

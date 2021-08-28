@@ -12,14 +12,18 @@ export default function operate(previous, next, operation) {
     case '-':
       value = prev.minus(nxt);
       break;
-    case 'X':
+    case '*':
       value = prev.times(nxt);
       break;
     case '%':
       value = prev.mod(nxt);
       break;
     case '/':
-      value = prev.div(nxt);
+      if (String(nxt) !== '0') {
+        value = prev.div(nxt);
+      } else {
+        value = 'ERROR can\'t divide by 0';
+      }
       break;
     case '=':
       value = prev;
@@ -27,5 +31,5 @@ export default function operate(previous, next, operation) {
     default:
       value = 0;
   }
-  return value.toString;
+  return value.toString();
 }
