@@ -1,6 +1,6 @@
 # Calculator-App
 
-[Live Link](https://cocky-meninsky-3e636f.netlify.app/)
+[Live Link](https://young-refuge-88418.herokuapp.com/)
 
 A  ![](https://img.shields.io/badge/Microverse-blueviolet)  React Module Project
 
