@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
+import './styles/styles.css';
 
 export default function Button(props) {
   const { // eslint-disable-next-line

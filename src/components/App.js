@@ -28,13 +28,11 @@ const App = () => {
   align-items: center;
   `;
   return (
-    <>
-      <S>
-        <h1>React Calculator</h1>
-        <Display result={total} next={next} operation={operation} />
-        <ButtonPanel clickHandler={handleClick} />
-      </S>
-    </>
+    <S>
+      <h1>React Calculator</h1>
+      <Display result={total} next={next} operation={operation} />
+      <ButtonPanel clickHandler={handleClick} />
+    </S>
   );
 };
 
