@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import ButtonPanel from './ButtonPanel'; // eslint-disable-next-line
 import calculate from '../logic/calculate';
-import './styles.css';
 
 const App = () => {
   const [state, setState] = useState({
