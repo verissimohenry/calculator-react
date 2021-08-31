@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import '../styles/App.css';
+import './styles.css';
 
 function ButtonPanel(props) {
   const handleClick = (buttonName) => props.clickHandler(buttonName);
