@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles/styles.css';
+import './styles.css';
 
 export default function Display(props) {
   const { result, next, operation } = props;
