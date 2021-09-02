@@ -21,15 +21,16 @@ const App = () => {
     });
   };
 
-  const { total, next, operation } = state;
   const S = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   `;
+
+  const { total, next, operation } = state;
+
   return (
     <S>
-      <h1>React Calculator</h1>
       <Display result={total} next={next} operation={operation} />
       <ButtonPanel clickHandler={handleClick} />
     </S>
