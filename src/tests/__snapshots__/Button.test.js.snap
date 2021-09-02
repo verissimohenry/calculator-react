@@ -2,7 +2,7 @@
 
 exports[`Calculator renders correctly 1`] = `
 <div
-  className="sc-bdnxRM fuhHWP"
+  className="sc-bdfBQB hvyFxQ"
 >
   <div
     className="display height-100"
