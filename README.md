@@ -6,6 +6,11 @@ A  ![](https://img.shields.io/badge/Microverse-blueviolet)  React Module Project
 
 A Calculator App is developed.
 
+# Screenshort
+
+![Screenshot](src/image/cal.png)
+
+
 ## Built With
 
 - JavaScript
