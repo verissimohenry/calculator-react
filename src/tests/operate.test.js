@@ -12,9 +12,9 @@ describe('Calculate operations', () => {
     const result = operate('8', '10', '-');
     expect(result * 1).toEqual(-2);
   });
-  it('Should return a divided value', () => {
-    const result = operate('10', '5', '/');
-    expect(result * 1).toEqual(2);
+  it('Should multiply 2 numbers', () => {
+    const res = operate('2', '4', '*');
+    expect(res * 1).toEqual(8);
   });
   it('Should return an error', () => {
     const result = operate('7', '0', '/');
