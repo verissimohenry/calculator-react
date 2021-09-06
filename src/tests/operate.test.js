@@ -1,23 +1,23 @@
 import operate from '../logic/operate';
 
-describe('operate', () => {
-  it('summation', () => {
-    const result = operate(1, 3, '+');
-    expect(result).toStrictEqual('4');
+describe('Calculate operations', () => {
+  it('Should be a function', () => {
+    expect(typeof operate).toEqual('function');
   });
-
-  it('subtraction', () => {
-    const result = operate(3, 1, '-');
-    expect(result).toStrictEqual('2');
+  it('Should sum two numbers', () => {
+    const result = operate('5', '1', '+');
+    expect(result * 1).toBe(6);
   });
-
-  it('multiplication', () => {
-    const result = operate(2, 3, '*');
-    expect(result).toStrictEqual('6');
+  it('Should subtract two numbers value', () => {
+    const result = operate('8', '10', '-');
+    expect(result * 1).toEqual(-2);
   });
-
-  it('division', () => {
-    const result = operate(1, 4, '/');
-    expect(result).toStrictEqual('0.25');
+  it('Should multiply 2 numbers', () => {
+    const res = operate('2', '4', '*');
+    expect(res * 1).toEqual(8);
+  });
+  it('Should return an error', () => {
+    const result = operate('7', '0', '/');
+    expect(result).toEqual('ERROR can\'t divide by 0');
   });
 });
